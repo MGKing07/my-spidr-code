@@ -30,3 +30,10 @@ h1 {
   margin: 15px auto 0;
 }
 
+@media screen and (max-width: 614px){
+  .GuessBox {
+    width: 400px;
+    padding: 15px;
+  }
+}
+
