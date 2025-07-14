@@ -4,7 +4,10 @@ import "../styles/GuessForm.css"
 function GuessForm() {
   return (
     <form>
-        <div></div>
+        <div className="FormSec">
+            <label><strong>Enter First Name:</strong></label>
+            <input className='TypingIn' type='text'/>
+        </div>
     </form>
   )
 }
