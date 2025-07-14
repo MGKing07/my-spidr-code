@@ -1,64 +1,41 @@
 import { useState } from "react";
 import "../styles/GuessForm.css"
 
-function GuessForm() {
-    const [firstN, setFirstN] = useState('');
-    const [lastN, setLastN] = useState('');
-    const [phoneN, setphoneN] = useState('');
-    const [email, setEmail] = useState('');
-    const [priceG, setpriceG] = useState('');
-    const [spidrPIN, setSpidrPIN] = useState('');
-
-    const firstNChange = (e) => {
-        setFirstN(e.target.value);
-    }
-    const lastNChange = (e) => {
-        setLastN(e.target.value);
-    }
-    const phoneNChange = (e) => {
-        setphoneN(e.target.value);
-    }
-    const emailChange = (e) => {
-        setEmail(e.target.value);
-    }
-    const priceGChange = (e) => {
-        setpriceG(e.target.value);
-    }
-    const pinChange = (e) => {
-        setSpidrPIN(e.target.value);
-    }
+function GuessForm({onSubmit, firstF, lastF, 
+    phoneF, emailF, priceF, pinF, 
+    firstV, lastV, phoneV, emailV, priceV, pinV}) {
 
   return (
-    <form>
+    <form onSubmit={onSubmit}>
         <div className="FormSec">
             <label><strong>Enter First Name:</strong></label>
-            <input required className='TypingIn' onChange={firstNChange} 
-            value={firstN} type='text'/>
+            <input required className='TypingIn' onChange={firstF} 
+            value={firstV} type='text'/>
         </div>
         <div className="FormSec">
             <label><strong>Enter Last Name:</strong></label>
-            <input required className='TypingIn' onChange={lastNChange} 
-            value={lastN} type='text'/>
+            <input required className='TypingIn' onChange={lastF} 
+            value={lastV} type='text'/>
         </div>
         <div className="FormSec">
             <label><strong>Enter Phone #:</strong></label>
-            <input required className='TypingIn' onChange={phoneNChange} 
-            value={phoneN} type='tel'/>
+            <input required className='TypingIn' onChange={phoneF} 
+            value={phoneV} type='tel'/>
         </div>
         <div className="FormSec">
             <label><strong>Enter Email:</strong></label>
-            <input required className='TypingIn' onChange={emailChange} 
-            value={email} type='email'/>
+            <input required className='TypingIn' onChange={emailF} 
+            value={emailV} type='email'/>
         </div>
         <div className="FormSec">
             <label><strong>Enter Price Guess:</strong></label>
-            <input required className='TypingIn' onChange={priceGChange} 
-            value={priceG} type='text'/>
+            <input required className='TypingIn' onChange={priceF} 
+            value={priceV} type='text'/>
         </div>
         <div className="FormSec">
             <label><strong>Enter Spidr PIN:</strong></label>
-            <input required className='TypingIn' onChange={pinChange} 
-            value={spidrPIN} type='text'/>
+            <input required className='TypingIn' onChange={pinF} 
+            value={pinV} type='text'/>
         </div>
         <input className='SubmitBtn' type='submit' value="Submit"/>
     </form>
