@@ -21,3 +21,14 @@ label {
   justify-content: space-between;
   width: 100%;
 }
+
+.SubmitBtn {
+    font-weight: 400;
+    font-size: 14px;
+    vertical-align: middle;
+    padding: 6px 12px;
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    background-color: transparent;
+}

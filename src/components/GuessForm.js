@@ -32,34 +32,35 @@ function GuessForm() {
     <form>
         <div className="FormSec">
             <label><strong>Enter First Name:</strong></label>
-            <input className='TypingIn' onChange={firstNChange} 
+            <input required className='TypingIn' onChange={firstNChange} 
             value={firstN} type='text'/>
         </div>
         <div className="FormSec">
             <label><strong>Enter Last Name:</strong></label>
-            <input className='TypingIn' onChange={lastNChange} 
+            <input required className='TypingIn' onChange={lastNChange} 
             value={lastN} type='text'/>
         </div>
         <div className="FormSec">
             <label><strong>Enter Phone #:</strong></label>
-            <input className='TypingIn' onChange={phoneNChange} 
+            <input required className='TypingIn' onChange={phoneNChange} 
             value={phoneN} type='tel'/>
         </div>
         <div className="FormSec">
             <label><strong>Enter Email:</strong></label>
-            <input className='TypingIn' onChange={emailChange} 
+            <input required className='TypingIn' onChange={emailChange} 
             value={email} type='email'/>
         </div>
         <div className="FormSec">
             <label><strong>Enter Price Guess:</strong></label>
-            <input className='TypingIn' onChange={priceGChange} 
+            <input required className='TypingIn' onChange={priceGChange} 
             value={priceG} type='text'/>
         </div>
         <div className="FormSec">
             <label><strong>Enter Spidr PIN:</strong></label>
-            <input className='TypingIn' onChange={pinChange} 
+            <input required className='TypingIn' onChange={pinChange} 
             value={spidrPIN} type='text'/>
         </div>
+        <input className='SubmitBtn' type='submit' value="Submit"/>
     </form>
   )
 }
