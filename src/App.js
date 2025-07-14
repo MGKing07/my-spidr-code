@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
 
+  //All the set states to store all info from field.
   const [firstN, setFirstN] = useState('');
   const [lastN, setLastN] = useState('');
   const [phoneN, setphoneN] = useState('');
@@ -11,6 +12,7 @@ function App() {
   const [priceG, setpriceG] = useState('');
   const [spidrPIN, setSpidrPIN] = useState('');
 
+  //Functions that changes the value from field.
   const firstNChange = (e) => {
       setFirstN(e.target.value);
   }
@@ -31,11 +33,14 @@ function App() {
   }
 
   const submitF = (e) => {
+    //Prints when submit button is clicked.
+    //Usually the backend handles email validation and pin validation.
     e.preventDefault();
     console.log("Submission Information");
     console.log("Full Name: " + firstN + " " + lastN);
     console.log("Phone Number: " + phoneN);
     console.log("Email Address: " + email);
+    //Decided to handle leading zeros here with parseFloat.
     console.log("Price Guess: $" + parseFloat(priceG).toFixed(2));
     console.log("Spidr PIN: " + spidrPIN);
   }
@@ -45,6 +50,7 @@ function App() {
         <h1>
           Guess Air Fryer Price<div className="TextL"></div>
         </h1>
+        {/* Passed all usedStated to form. */}
         <GuessForm onSubmit={submitF} firstF={firstNChange} 
         firstV={firstN} lastF={lastNChange} lastV={lastN} 
         phoneF={phoneNChange} phoneV={phoneN} emailF={emailChange} 
