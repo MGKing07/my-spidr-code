@@ -32,11 +32,12 @@ function App() {
 
   const submitF = (e) => {
     e.preventDefault();
-    console.log(firstN + " " + lastN);
-    console.log(phoneN);
-    console.log(email);
-    console.log(priceG);
-    console.log(spidrPIN);
+    console.log("Submission Information");
+    console.log("Full Name: " + firstN + " " + lastN);
+    console.log("Phone Number: " + phoneN);
+    console.log("Email Address: " + email);
+    console.log("Price Guess: $" + parseFloat(priceG).toFixed(2));
+    console.log("Spidr PIN: " + spidrPIN);
   }
   return (
     <div className="App">
