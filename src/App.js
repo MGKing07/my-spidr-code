@@ -50,7 +50,7 @@ function App() {
         <h1>
           Guess Air Fryer Price<div className="TextL"></div>
         </h1>
-        {/* Passed all usedStated to form. */}
+        {/* Passed all useStates to form. */}
         <GuessForm onSubmit={submitF} firstF={firstNChange} 
         firstV={firstN} lastF={lastNChange} lastV={lastN} 
         phoneF={phoneNChange} phoneV={phoneN} emailF={emailChange} 
