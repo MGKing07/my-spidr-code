@@ -1,0 +1,23 @@
+form {
+  width: 90%;
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  gap: 10px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.TypingIn {
+  width: 185px;
+  font-size: 14px;
+}
+
+.FormSec {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
